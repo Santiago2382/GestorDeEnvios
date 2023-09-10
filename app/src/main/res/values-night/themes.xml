@@ -7,6 +7,6 @@
         <item name="colorSecondary">@color/white</item>
         <item name="colorOnSecondary">@color/gray</item>
         <item name="colorTertiary">@color/background</item>
-        <item name="android:statusBarColor" tools:targetApi= "21">?attr/colorPrimary</item>
+        <item name="android:statusBarColor" tools:targetApi= "21">?attr/colorTertiary</item>
     </style>
 </resources>
