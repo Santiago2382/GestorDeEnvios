@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">GestorEnvios</string>
     <!--  Sofia   -->
-
+    <string name="Iniciar">GestorEnvios</string>
 
     <!--Harold -->
 
