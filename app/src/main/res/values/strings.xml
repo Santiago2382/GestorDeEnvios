@@ -5,7 +5,10 @@
 
     <!--Harold -->
 
-
+    <string name="loginDescription">¡Bienvenido!</string>
+    <string name="loginCorreo">Correo Electrónico</string>
+    <string name="loginPass">Contraseña</string>
+    <string name="olvidoPass">¿olvidó su contraseña?</string>
     <!--Santiago -->
 
 </resources>
