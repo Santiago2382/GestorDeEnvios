@@ -214,7 +214,7 @@
     <EditText
         android:id="@+id/etCelularRecibe"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:ems="10"
         android:inputType="text"
         android:textAlignment="center"
@@ -224,20 +224,21 @@
         android:layout_marginRight="20dp"
         android:background="@color/yellow"
         android:layout_marginBottom="15dp"
+        android:hint="-"
         />
 
     <Button
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:id="@+id/btnSolicitarEnvio"
         android:text="@string/btnLogin"
         android:fontFamily="serif"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="20dp"
         android:background="@color/yellow"
         android:layout_marginLeft="50dp"
-        android:layout_marginRight="50dp"
-        />
+        android:layout_marginRight="50dp" />
+
 
 
 
