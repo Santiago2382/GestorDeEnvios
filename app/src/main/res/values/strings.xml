@@ -8,6 +8,10 @@
     <string name="etNit">NIT</string>
     <string name="etCorreo">Correo Electronico</string>
     <string name="btnSiguienteRegis">Siguiente</string>
+    <string name="etMensaje">Escriba aquí su mensaje o sugerencia</string>
+    <string name="etCorreoElectronico">Escriba su correo electronico</string>
+    <string name="etNombreCompleto">Escriba su nombre completo</string>
+    <string name="btnEnviar">Enviar</string>
     <!--Harold -->
 
     <string name="loginDescription">¡Bienvenido!</string>

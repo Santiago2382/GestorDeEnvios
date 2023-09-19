@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/ssh" />
+
+
+    <EditText
+        android:id="@+id/etNombreCompleto"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginBottom="18dp"
+        android:background="@color/yellow"
+        android:hint="@string/etNombreCompleto"
+        android:text="Escriba su nombre completo"
+        android:textAlignment="center"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/etCorreoElectronico"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginBottom="80dp"
+        android:background="@color/yellow"
+        android:hint="@string/etCorreoElectronico"
+        android:inputType="text"
+        android:text="Escriba su correo electronico"
+        android:textAlignment="center" />
+
+    <EditText
+        android:id="@+id/etMensaje"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginBottom="80dp"
+        android:background="@color/yellow"
+        android:hint="@string/etMensaje"
+        android:inputType="text"
+        android:text="Escriba aquí su mensaje o sugerencia"
+        android:textAlignment="center"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btnEnviar"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="70dp"
+        android:text="Enviar"
+        android:textSize="20dp" />
+
+
+
+</LinearLayout>
