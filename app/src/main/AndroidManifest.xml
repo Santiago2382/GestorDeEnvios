@@ -19,6 +19,12 @@
             android:name=".OlvidoPass"
             android:exported="false" />
         <activity
+            android:name=".pedidos"
+            android:exported="false" />
+        <activity
+            android:name=".Buzon"
+            android:exported="false" />
+        <activity
             android:name=".Registro"
             android:exported="false" />
         <activity
