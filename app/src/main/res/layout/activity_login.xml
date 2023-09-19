@@ -106,15 +106,19 @@
 
 
     <Button
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
         android:layout_height="48dp"
         android:id="@+id/btnLogin"
         android:text="@string/btnLogin"
         android:textColor="@color/black"
-        android:autoSizeMinTextSize="48dp"
+        android:autoSizeMinTextSize="48sp"
+        android:textAlignment="center"
         android:background="@color/yellow"
+        android:layout_marginLeft="80dp"
         android:contentDescription="Iniciar sesión"
-        />
+        android:layout_centerHorizontal="true"
+    />
+
 
 
 
