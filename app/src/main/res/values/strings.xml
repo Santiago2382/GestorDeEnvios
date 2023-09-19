@@ -1,8 +1,13 @@
 <resources>
     <string name="app_name">SSH</string>
     <!--  Sofia   -->
-    <string name="Iniciar">GestorEnvios</string>
-
+    <string name="btnIniciar">Iniciar Sesion</string>
+    <string name="btnRegis">Registarse</string>
+    <string name="etNombreEmpresa">Nombre Empresa</string>
+    <string name="etNumeroCelualr">Numero Celular</string>
+    <string name="etNit">NIT</string>
+    <string name="etCorreo">Correo Electronico</string>
+    <string name="btnSiguienteRegis">Siguiente</string>
     <!--Harold -->
 
     <string name="loginDescription">¡Bienvenido!</string>
