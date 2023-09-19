@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:background="@color/background">
 
@@ -14,87 +15,76 @@
         android:id="@+id/tvLoginDescription"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="40dp"
-        android:fontFamily="serif"
+        android:layout_marginBottom="70dp"
         android:text="@string/loginDescription"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="20dp" />
 
-    <TextView
-        android:id="@+id/tvLoginCorreo"
+
+
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:hint="Correo Electrónico"
+        android:layout_marginTop="24dp"
+        app:hintTextColor="@color/yellow"
+        android:background="@color/background"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:layout_marginBottom="20dp"
-        android:fontFamily="serif"
-        android:text="@string/loginCorreo"
-        android:textColor="@color/white"
-        android:textSize="25dp"
-        />
+        app:helperTextEnabled="true"
+        android:layout_marginBottom="12dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-    <EditText
-        android:id="@+id/etLoginCorreo"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:ems="10"
-        android:inputType="textEmailAddress"
-        android:textAlignment="center"
-        android:textSize="20dp"
-        android:padding="10dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:background="@color/yellow"
-        android:layout_marginBottom="20dp"
-        android:hint="-"
-        />
-    <TextView
-        android:id="@+id/tvLoginPass"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etCorreoElectronico"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="true"
+            android:inputType="textEmailAddress"
+            android:maxLength="4000"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:hint="Correo Electrónico"
+        android:layout_marginTop="24dp"
+        app:hintTextColor="@color/yellow"
+        android:background="@color/background"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:layout_marginBottom="20dp"
-        android:fontFamily="serif"
-        android:text="@string/loginPass"
-        android:textColor="@color/white"
-        android:textSize="25dp"
-        />
+        app:helperTextEnabled="true"
+        android:layout_marginBottom="12dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-    <EditText
-        android:id="@+id/etLoginPass"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:ems="10"
-        android:inputType="textEmailAddress"
-        android:textAlignment="center"
-        android:textSize="20dp"
-        android:padding="10dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:background="@color/yellow"
-        android:hint="-"
-        android:layout_marginBottom="20dp"
-        />
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etLoginPass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="true"
+            android:inputType="textPassword"
+            android:maxLength="4000"/>
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <TextView
-        android:id="@+id/tvLoginOlvidoPass"
+    <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="50dp"
-        android:fontFamily="serif"
+        android:id="@+id/btnLoginOlvidoPass"
         android:text="@string/olvidoPass"
-        android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="20dp" />
+        android:autoSizeMinTextSize="48dp"
+        android:layout_marginBottom="70sp"
+        android:background="@android:color/transparent"
+        android:focusable="true"
+        android:clickable="true"
+        />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/btnRegistrarse"
         android:text="@string/btnRegistrarse"
-        android:fontFamily="serif"
         android:textColor="@color/white"
         android:autoSizeMinTextSize="48dp"
         android:background="@android:color/transparent"
@@ -106,18 +96,12 @@
 
 
     <Button
+        android:id="@+id/btnIngresarApp"
         android:layout_width="300dp"
-        android:layout_height="48dp"
-        android:id="@+id/btnLogin"
-        android:text="@string/btnLogin"
-        android:textColor="@color/black"
-        android:autoSizeMinTextSize="48sp"
-        android:textAlignment="center"
-        android:background="@color/yellow"
-        android:layout_marginLeft="80dp"
-        android:contentDescription="Iniciar sesión"
-        android:layout_centerHorizontal="true"
-    />
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="60dp"
+        android:layout_marginBottom="5dp"
+        android:text="@string/btnLogin" />
 
 
 
