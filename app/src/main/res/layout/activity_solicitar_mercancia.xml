@@ -231,7 +231,7 @@
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:id="@+id/btnSolicitarEnvio"
-        android:text="@string/btnLogin"
+        android:text="@string/btnSolicitarEnvio"
         android:fontFamily="serif"
         android:textColor="@color/black"
         android:textSize="20dp"
