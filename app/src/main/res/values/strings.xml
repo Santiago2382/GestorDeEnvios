@@ -9,6 +9,19 @@
     <string name="loginCorreo">Correo Electrónico</string>
     <string name="loginPass">Contraseña</string>
     <string name="olvidoPass">¿olvidó su contraseña?</string>
+    <string name="btnRegistrarse">Registrarse aquí</string>
+    <string name="btnLogin">Iniciar Sesión</string>
+    <string name="tvCantidadPaquetes">Cantidad de paquetes</string>
+    <string name="tvDimension">Dimensión</string>
+    <string name="EtDimensionAncho">Ancho</string>
+    <string name="EtDimensionAlto">Alto</string>
+    <string name="tvDireccionPaquete">Dirección</string>
+    <string name="etBarrioPaquete">Barrio</string>
+    <string name="etCiudadPaquete">Ciudad</string>
+    <string name="tvNombreRecibe">Nombre de quién recibe</string>
+    <string name="tvCelularRecibe">Celular de quién recibe</string>
+    <string name="btnSolicitarEnvio">Solicitar Envío</string>
+
     <!--Santiago -->
 
 </resources>

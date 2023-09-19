@@ -7,20 +7,19 @@
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="400dp"
-        android:layout_marginTop="20dp"
+        android:layout_height="200dp"
         android:src="@drawable/ssh" />
 
     <TextView
         android:id="@+id/tvLoginDescription"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="40dp"
         android:fontFamily="serif"
         android:text="@string/loginDescription"
         android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="30dp" />
+        android:textSize="20dp" />
 
     <TextView
         android:id="@+id/tvLoginCorreo"
@@ -32,22 +31,23 @@
         android:fontFamily="serif"
         android:text="@string/loginCorreo"
         android:textColor="@color/white"
-        android:textSize="40dp"
+        android:textSize="25dp"
         />
 
     <EditText
         android:id="@+id/etLoginCorreo"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:ems="10"
         android:inputType="textEmailAddress"
         android:textAlignment="center"
-        android:textSize="35dp"
+        android:textSize="20dp"
         android:padding="10dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:background="@color/yellow"
-        android:layout_marginBottom="70dp"
+        android:layout_marginBottom="20dp"
+        android:hint="-"
         />
     <TextView
         android:id="@+id/tvLoginPass"
@@ -59,21 +59,22 @@
         android:fontFamily="serif"
         android:text="@string/loginPass"
         android:textColor="@color/white"
-        android:textSize="40dp"
+        android:textSize="25dp"
         />
 
     <EditText
-        android:id="@+id/dtLoginPass"
+        android:id="@+id/etLoginPass"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:ems="10"
         android:inputType="textEmailAddress"
         android:textAlignment="center"
-        android:textSize="35dp"
+        android:textSize="20dp"
         android:padding="10dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:background="@color/yellow"
+        android:hint="-"
         android:layout_marginBottom="20dp"
         />
 
@@ -86,8 +87,34 @@
         android:text="@string/olvidoPass"
         android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="30dp" />
+        android:textSize="20dp" />
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnRegistrarse"
+        android:text="@string/btnRegistrarse"
+        android:fontFamily="serif"
+        android:textColor="@color/white"
+        android:autoSizeMinTextSize="48dp"
+        android:background="@android:color/transparent"
+        android:focusable="true"
+        android:clickable="true"
+    />
+
+
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:id="@+id/btnLogin"
+        android:text="@string/btnLogin"
+        android:textColor="@color/black"
+        android:autoSizeMinTextSize="48dp"
+        android:background="@color/yellow"
+        android:contentDescription="Iniciar sesión"
+        />
 
 
 

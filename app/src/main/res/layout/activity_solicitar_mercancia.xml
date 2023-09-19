@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Solicitar_mercancia"
+    android:orientation="vertical"
+    android:background="@color/background">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:src="@drawable/ssh" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvCantidadPaquetes"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        android:text="@string/tvCantidadPaquetes"
+        android:fontFamily="serif"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"/>
+
+    <EditText
+        android:id="@+id/etCantidadPaquetes"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:autoSizeMinTextSize="48dp"
+        android:padding="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/yellow"
+        android:layout_marginBottom="15dp"
+        android:hint="-"
+        />
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvDimension"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        android:text="@string/tvDimension"
+        android:fontFamily="serif"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"/>
+
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp">
+
+        <TableRow>
+            <EditText
+                android:id="@+id/etDimensionAlto"
+                android:text="@string/EtDimensionAlto"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="number"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                android:padding="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/yellow"
+                android:layout_marginBottom="15dp" />
+
+            <EditText
+                android:id="@+id/etDimensionAncho"
+                android:text="@string/EtDimensionAncho"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="number"
+                android:textAlignment="center"
+                android:autoSizeMinTextSize="48dp"
+                android:padding="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@color/yellow"
+                android:layout_marginBottom="15dp" />
+
+        </TableRow>
+
+    </TableLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvDireccionPaquete"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        android:text="@string/tvDireccionPaquete"
+        android:fontFamily="serif"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"/>
+
+    <EditText
+        android:id="@+id/etDireccionPaquete"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:inputType="text"
+        android:textAlignment="center"
+        android:autoSizeMinTextSize="48dp"
+        android:padding="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/yellow"
+        android:layout_marginBottom="15dp"
+        android:hint="-"
+        />
+
+
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp">
+
+        <TableRow>
+            <EditText
+                android:id="@+id/etCiudadPaquete"
+                android:text="@string/etCiudadPaquete"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="text"
+                android:textAlignment="center"
+                android:autoSizeMinTextSize="48dp"
+                android:padding="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/yellow"
+                android:layout_marginBottom="15dp" />
+
+            <EditText
+                android:id="@+id/etBarrioPaquete"
+                android:text="@string/etBarrioPaquete"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="text"
+                android:textAlignment="center"
+                android:autoSizeMinTextSize="48dp"
+                android:padding="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="20dp"
+                android:background="@color/yellow"
+                android:layout_marginBottom="15dp" />
+        </TableRow>
+
+    </TableLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvNombreRecibe"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        android:text="@string/tvNombreRecibe"
+        android:fontFamily="serif"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"/>
+
+    <EditText
+        android:id="@+id/etNombreRecibe"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:inputType="text"
+        android:textAlignment="center"
+        android:autoSizeMinTextSize="48dp"
+        android:padding="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/yellow"
+        android:layout_marginBottom="15dp"
+        android:textColor="#FFFFFF"
+        android:hint="-"
+        />
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvCelularRecibe"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        android:text="@string/tvCelularRecibe"
+        android:fontFamily="serif"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"/>
+
+    <EditText
+        android:id="@+id/etCelularRecibe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        android:padding="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/yellow"
+        android:layout_marginBottom="15dp"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnSolicitarEnvio"
+        android:text="@string/btnLogin"
+        android:fontFamily="serif"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:background="@color/yellow"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        />
+
+
+
+</LinearLayout>
