@@ -4,12 +4,12 @@
     <string name="btnIniciar">Iniciar Sesion</string>
     <string name="btnRegis">Registarse</string>
     <string name="etNombreEmpresa">Nombre Empresa</string>
-    <string name="etNumeroCelualr">Numero Celular</string>
+    <string name="etNumeroCelualr">Número Celular</string>
     <string name="etNit">NIT</string>
-    <string name="etCorreo">Correo Electronico</string>
+    <string name="etCorreo">Correo Electrónico</string>
     <string name="btnSiguienteRegis">Siguiente</string>
     <string name="etMensaje">Escriba aquí su mensaje o sugerencia</string>
-    <string name="etCorreoElectronico">Escriba su correo electronico</string>
+    <string name="etCorreoElectronico">Escriba su correo electrónico</string>
     <string name="etNombreCompleto">Escriba su nombre completo</string>
     <string name="btnEnviar">Enviar</string>
     <string name="btnDevolverce">Devolverce</string>
@@ -18,7 +18,7 @@
     <string name="loginDescription">¡Bienvenido!</string>
     <string name="loginCorreo">Correo Electrónico</string>
     <string name="loginPass">Contraseña</string>
-    <string name="olvidoPass">¿olvidó su contraseña?</string>
+    <string name="olvidoPass">¿Olvidó su contraseña?</string>
     <string name="btnRegistrarse">Registrarse aquí</string>
     <string name="btnLogin">Iniciar Sesión</string>
     <string name="tvCantidadPaquetes">Cantidad de paquetes</string>
@@ -39,5 +39,20 @@
     <string name="btnPreguntasFrecuentes">Preguntas Frecuentes</string>
 
     <!--Santiago -->
+    <string name="tvRecuperarPass">Recuperar contraseña</string>
+    <string name="tvMenu">Menú</string>
+    <string name="tvHistorialEnvios">Historial de envios</string>
+    <string name="tvBuzonSugerencias">Buzón de sugerencias</string>
+    <string name="tvSolicitarMercancia">Solicitar mercancía</string>
+    <string name="etNuevaPass">Nueva contraseña</string>
+    <string name="etConfirmarNuevaPass">Confirmar contraseña</string>
+    <string name="etUsuarioPass">Usuario</string>
+    <string name="btnConfirmarPass">Confirmar</string>
+    <string name="btnHistorialEnvios">Historial de envíos</string>
+    <string name="btnSolicitarMercancia">Solicitar Mercancía</string>
+    <string name="btnBuzonSugerencias">Buzón de Sugerencias</string>
+    <string name="btnSalir">Salir</string>
+
+
 
 </resources>

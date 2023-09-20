@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 public class Menu extends AppCompatActivity {
 
@@ -14,7 +15,17 @@ public class Menu extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
-        Button buttonSolicitarMercancia = findViewById(R.id.btnSolicitarMercancia);
+        ImageButton buttonHistorialEnvios = findViewById(R.id.btnHistorialEnvios);
+        buttonHistorialEnvios.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Iniciar la segunda actividad aquí
+                Intent intent = new Intent(Menu.this, Envios.class);
+                startActivity(intent);
+            }
+        });
+
+        ImageButton buttonSolicitarMercancia = findViewById(R.id.btnSolicitarMercancia);
         buttonSolicitarMercancia.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -24,7 +35,17 @@ public class Menu extends AppCompatActivity {
             }
         });
 
-        Button buttonPreguntasFrecuentes = findViewById(R.id.btnPreguntasFrecuentes);
+        ImageButton buttonBuzonSugerencias = findViewById(R.id.btnBuzonSugerencias);
+        buttonBuzonSugerencias.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Iniciar la segunda actividad aquí
+                Intent intent = new Intent(Menu.this, Buzon.class);
+                startActivity(intent);
+            }
+        });
+
+        ImageButton buttonPreguntasFrecuentes = findViewById(R.id.btnPreguntasFrecuentes);
         buttonPreguntasFrecuentes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
