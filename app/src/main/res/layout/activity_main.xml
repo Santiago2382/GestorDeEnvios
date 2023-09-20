@@ -10,7 +10,7 @@
     tools:context=".MainActivity"
     android:background="@color/background"
     >
-z
+
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="270dp"
@@ -19,21 +19,19 @@ z
 
     <Button
         android:id="@+id/btnIniciar"
-        android:layout_width="300dp"
-        android:layout_height="65dp"
-        android:layout_marginHorizontal="70dp"
-        android:layout_marginBottom="60dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
         android:text="@string/btnIniciar"
-        android:textSize="25dp"
-        android:textAlignment="center" />
+        android:textSize="18sp" />
 
     <Button
         android:id="@+id/btnRegis"
-        android:layout_width="300dp"
-        android:layout_height="65dp"
-        android:layout_marginHorizontal="70dp"
-        android:textSize="25dp"
-        android:text="@string/btnRegis" />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="@string/btnRegis"
+        android:textSize="18sp" />
 
 </LinearLayout>
 
