@@ -1,9 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PreguntasFrecuentes">
+    tools:context=".PreguntasFrecuentes"
+    android:background="@color/background"
+    android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ssh"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvTituloPreguntas"
+        android:text="@string/tvTituloPreguntas"
+        android:layout_marginTop="16dp"
+        android:layout_gravity="center"
+        android:textColor="@color/white"
+        android:textSize="24sp"/>
+
+    <Button
+        android:id="@+id/btnPregunta1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="@string/btnPregunta1"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/btnPregunta2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="@string/btnPregunta2"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/btnPregunta3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="@string/btnPregunta3"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/btnVolverPreguntas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="@string/btnVolverPreguntas"
+        android:textSize="18sp" />
+
+</LinearLayout>
+
+</ScrollView>

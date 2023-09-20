@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:src="@drawable/ssh" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:layout_marginTop="200sp"
+        android:textColor="@color/white"
+        android:text="Una vez se inicia sesión se despliega un menú y en el botón SOLICITAR MERCANCIA se incia el proceso de solicitirud"
+        android:layout_marginRight="3dp"
+        android:layout_marginLeft="3dp"
+        android:textAlignment="center"
+        android:id="@+id/tvPreagunta1"/>
+
+    <Button
+        android:id="@+id/btnVolverPregunta1"
+        android:layout_width="300dp"
+        android:layout_height="65dp"
+        android:layout_marginHorizontal="50dp"
+        android:textSize="25dp"
+        android:layout_marginTop="70dp"
+        android:text="@string/btnVolverPreguntas" />
+</LinearLayout>

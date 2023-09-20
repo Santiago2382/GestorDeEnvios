@@ -10,7 +10,7 @@
     tools:context=".MainActivity"
     android:background="@color/background"
     >
-
+z
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="270dp"

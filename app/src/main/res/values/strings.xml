@@ -21,7 +21,7 @@
     <string name="btnRegistrarse">Registrarse aquí</string>
     <string name="btnLogin">Iniciar Sesión</string>
     <string name="tvCantidadPaquetes">Cantidad de paquetes</string>
-    <string name="tvDimension">Dimensión</string>
+    <string name="tvDimension">Dimensiones del pedido (en total)</string>
     <string name="EtDimensionAncho">Ancho</string>
     <string name="EtDimensionAlto">Alto</string>
     <string name="tvDireccionPaquete">Dirección</string>
@@ -30,6 +30,12 @@
     <string name="tvNombreRecibe">Nombre de quién recibe</string>
     <string name="tvCelularRecibe">Celular de quién recibe</string>
     <string name="btnSolicitarEnvio">Solicitar Envío</string>
+    <string name="tvTituloPreguntas">Preguntas Frecuentes</string>
+    <string name="btnPregunta1">¿Cómo solicito un envío de mercancia?</string>
+    <string name="btnPregunta2">¿Cómo se si el pedido ya fue enviado?</string>
+    <string name="btnPregunta3">¿Cómo miro la información de mi pedido?</string>
+    <string name="btnVolverPreguntas">Volver</string>
+    <string name="btnPreguntasFrecuentes">Preguntas Frecuentes</string>
 
     <!--Santiago -->
 

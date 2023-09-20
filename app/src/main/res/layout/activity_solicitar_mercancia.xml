@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Solicitar_mercancia"
+    tools:context=".SolicitarMercancia"
     android:orientation="vertical"
     android:background="@color/background">
 
@@ -13,33 +17,29 @@
         android:layout_height="150dp"
         android:src="@drawable/ssh" />
 
-    <TextView
+
+
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/tvCantidadPaquetes"
-        android:textSize="20dp"
-        android:textColor="@color/white"
-        android:text="@string/tvCantidadPaquetes"
-        android:fontFamily="serif"
-        android:layout_marginLeft="15dp"
+        android:hint="Cantidad Paquetes"
+        android:layout_marginTop="24dp"
+        app:hintTextColor="@color/yellow"
+        android:background="@color/background"
+        android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:layout_marginBottom="10dp"/>
+        app:helperTextEnabled="true"
+        android:layout_marginBottom="12dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-    <EditText
-        android:id="@+id/etCantidadPaquetes"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:ems="10"
-        android:inputType="number"
-        android:textAlignment="center"
-        android:autoSizeMinTextSize="48dp"
-        android:padding="10dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="20dp"
-        android:background="@color/yellow"
-        android:layout_marginBottom="15dp"
-        android:hint="-"
-        />
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etCantidadPaquetes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="true"
+            android:inputType="number"
+            android:maxLength="4000"/>
+    </com.google.android.material.textfield.TextInputLayout>
 
 
 
@@ -50,10 +50,10 @@
         android:textSize="20dp"
         android:textColor="@color/white"
         android:text="@string/tvDimension"
-        android:fontFamily="serif"
+        android:textAlignment="center"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="20dp"
-        android:layout_marginBottom="10dp"/>
+        />
 
 
     <TableLayout
@@ -62,184 +62,192 @@
         android:layout_marginBottom="10dp">
 
         <TableRow>
-            <EditText
-                android:id="@+id/etDimensionAlto"
-                android:text="@string/EtDimensionAlto"
-                android:layout_width="wrap_content"
-                android:layout_height="48dp"
-                android:layout_weight="1"
-                android:ems="10"
-                android:inputType="number"
-                android:textAlignment="center"
-                android:textSize="20dp"
-                android:padding="10dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="10dp"
-                android:background="@color/yellow"
-                android:layout_marginBottom="15dp" />
 
-            <EditText
-                android:id="@+id/etDimensionAncho"
-                android:text="@string/EtDimensionAncho"
-                android:layout_width="match_parent"
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:ems="10"
-                android:inputType="number"
-                android:textAlignment="center"
-                android:autoSizeMinTextSize="48dp"
-                android:padding="16dp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:background="@color/yellow"
-                android:layout_marginBottom="15dp" />
+                android:hint="Alto"
+                app:hintTextColor="@color/yellow"
+                android:background="@color/background"
+                app:helperTextEnabled="true"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etDimensionAlto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="2sp"
+                    android:enabled="true"
+                    android:inputType="numberDecimal"
+                    android:maxLength="4000" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Ancho"
+                app:hintTextColor="@color/yellow"
+                android:background="@color/background"
+                app:helperTextEnabled="true"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etDimensionAncho"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="2dp"
+                    android:enabled="true"
+                    android:inputType="numberDecimal"
+                    android:maxLength="4000" />
+            </com.google.android.material.textfield.TextInputLayout>
 
         </TableRow>
 
     </TableLayout>
 
-    <TextView
+
+
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/tvDireccionPaquete"
-        android:textSize="20dp"
-        android:textColor="@color/white"
-        android:text="@string/tvDireccionPaquete"
-        android:fontFamily="serif"
-        android:layout_marginLeft="15dp"
+        android:hint="Dirección"
+        android:layout_marginTop="24dp"
+        app:hintTextColor="@color/yellow"
+        android:background="@color/background"
+        android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:layout_marginBottom="10dp"/>
+        app:helperTextEnabled="true"
+        android:layout_marginBottom="12dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-    <EditText
-        android:id="@+id/etDireccionPaquete"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:ems="10"
-        android:inputType="text"
-        android:textAlignment="center"
-        android:autoSizeMinTextSize="48dp"
-        android:padding="10dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="20dp"
-        android:background="@color/yellow"
-        android:layout_marginBottom="15dp"
-        android:hint="-"
-        />
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etDireccionPaquete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="true"
+            android:inputType="text"
+            android:maxLength="4000"/>
+    </com.google.android.material.textfield.TextInputLayout>
 
 
 
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp">
+        android:layout_marginBottom="10dp">
 
         <TableRow>
-            <EditText
-                android:id="@+id/etCiudadPaquete"
-                android:text="@string/etCiudadPaquete"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_weight="1"
-                android:ems="10"
-                android:inputType="text"
-                android:textAlignment="center"
-                android:autoSizeMinTextSize="48dp"
-                android:padding="10dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="10dp"
-                android:background="@color/yellow"
-                android:layout_marginBottom="15dp" />
 
-            <EditText
-                android:id="@+id/etBarrioPaquete"
-                android:text="@string/etBarrioPaquete"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:ems="10"
-                android:inputType="text"
-                android:textAlignment="center"
-                android:autoSizeMinTextSize="48dp"
-                android:padding="10dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="20dp"
-                android:background="@color/yellow"
-                android:layout_marginBottom="15dp" />
+                android:hint="Ciudad"
+                app:hintTextColor="@color/yellow"
+                android:background="@color/background"
+                app:helperTextEnabled="true"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etCiudadPaquete"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_gravity="center"
+                    android:enabled="true"
+                    android:inputType="text"
+                    android:maxLength="4000" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Barrio"
+                app:hintTextColor="@color/yellow"
+                android:background="@color/background"
+                app:helperTextEnabled="true"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etBarrioPaquete"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_gravity="center"
+                    android:enabled="true"
+                    android:inputType="text"
+                    android:maxLength="4000" />
+            </com.google.android.material.textfield.TextInputLayout>
+
         </TableRow>
 
     </TableLayout>
 
-    <TextView
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/tvNombreRecibe"
-        android:textSize="20dp"
-        android:textColor="@color/white"
-        android:text="@string/tvNombreRecibe"
-        android:fontFamily="serif"
-        android:layout_marginLeft="15dp"
+        android:hint="Nombre de quién recibe"
+        android:layout_marginTop="24dp"
+        app:hintTextColor="@color/yellow"
+        android:background="@color/background"
+        android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:layout_marginBottom="10dp"/>
+        app:helperTextEnabled="true"
+        android:layout_marginBottom="12dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-    <EditText
-        android:id="@+id/etNombreRecibe"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:inputType="text"
-        android:textAlignment="center"
-        android:autoSizeMinTextSize="48dp"
-        android:padding="10dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="20dp"
-        android:background="@color/yellow"
-        android:layout_marginBottom="15dp"
-        android:textColor="#FFFFFF"
-        android:hint="-"
-        />
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etNombreRecibe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="true"
+            android:inputType="text"
+            android:maxLength="4000"/>
+    </com.google.android.material.textfield.TextInputLayout>
 
 
-
-    <TextView
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/tvCelularRecibe"
-        android:textSize="20dp"
-        android:textColor="@color/white"
-        android:text="@string/tvCelularRecibe"
-        android:fontFamily="serif"
-        android:layout_marginLeft="15dp"
+        android:hint="Celular de quién recibe"
+        android:layout_marginTop="24dp"
+        app:hintTextColor="@color/yellow"
+        android:background="@color/background"
+        android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:layout_marginBottom="10dp"/>
+        app:helperTextEnabled="true"
+        android:layout_marginBottom="12dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-    <EditText
-        android:id="@+id/etCelularRecibe"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:ems="10"
-        android:inputType="text"
-        android:textAlignment="center"
-        android:textSize="20dp"
-        android:padding="10dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="20dp"
-        android:background="@color/yellow"
-        android:layout_marginBottom="15dp"
-        android:hint="-"
-        />
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etCelularRecibe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="true"
+            android:inputType="number"
+            android:layout_marginBottom="40dp"
+            android:maxLength="4000"/>
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
+        android:id="@+id/btnSolicitarMercancia"
         android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:id="@+id/btnSolicitarEnvio"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
         android:text="@string/btnSolicitarEnvio"
-        android:fontFamily="serif"
-        android:textColor="@color/black"
-        android:textSize="20dp"
-        android:background="@color/yellow"
-        android:layout_marginLeft="50dp"
-        android:layout_marginRight="50dp" />
-
-
-
+        android:textSize="18sp" />
 
 </LinearLayout>
+</ScrollView>

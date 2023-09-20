@@ -15,6 +15,11 @@
         <activity
             android:name=".Menu"
             android:exported="false" />
+
+        <activity
+            android:name=".PreguntasFrecuentes"
+            android:exported="false" />
+
         <activity
             android:name=".OlvidoPass"
             android:exported="false" />
@@ -28,7 +33,7 @@
             android:name=".Registro"
             android:exported="false" />
         <activity
-            android:name=".Solicitar_mercancia"
+            android:name=".SolicitarMercancia"
             android:exported="false" />
         <activity
             android:name=".Login"
