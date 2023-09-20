@@ -24,7 +24,7 @@
             android:name=".OlvidoPass"
             android:exported="false" />
         <activity
-            android:name=".pedidos"
+            android:name=".Envios"
             android:exported="false" />
         <activity
             android:name=".Buzon"
