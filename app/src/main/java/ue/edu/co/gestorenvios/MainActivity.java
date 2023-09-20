@@ -23,5 +23,17 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        Button buttonRegistro = findViewById(R.id.btnRegis);
+        buttonRegistro.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Iniciar la segunda actividad aquí
+                Intent intent = new Intent(MainActivity.this, Registro.class);
+                startActivity(intent);
+            }
+        });
+
+
     }
 }

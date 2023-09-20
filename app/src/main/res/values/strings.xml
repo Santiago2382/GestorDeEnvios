@@ -12,6 +12,7 @@
     <string name="etCorreoElectronico">Escriba su correo electronico</string>
     <string name="etNombreCompleto">Escriba su nombre completo</string>
     <string name="btnEnviar">Enviar</string>
+    <string name="btnDevolverce">Devolverce</string>
     <!--Harold -->
 
     <string name="loginDescription">¡Bienvenido!</string>

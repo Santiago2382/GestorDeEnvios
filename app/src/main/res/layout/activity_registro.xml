@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="4dp"
-    tools:context=".MainActivity"
-    android:background="@color/background"
-    >
+    android:fillViewport="true">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".SolicitarMercancia"
+        android:orientation="vertical"
+        android:background="@color/background">
 
     <ImageView
         android:layout_width="match_parent"
@@ -17,103 +18,135 @@
         android:src="@drawable/ssh"
         android:layout_marginBottom="10dp"/>
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:fontFamily="serif"
-        android:text="Registrate aqui  y disfruta de nuestros servicios "
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="20dp" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Nombre Empresa"
-        android:textColor="@color/white"
-        android:textSize="20dp"
-        />
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre Completo"
+            android:layout_marginTop="24dp"
+            app:hintTextColor="@color/yellow"
+            android:background="@color/background"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            app:helperTextEnabled="true"
+            android:layout_marginBottom="12dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-    <EditText
-        android:id="@+id/etNombreEmpresa"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:layout_marginLeft="12dp"
-        android:layout_marginRight="12dp"
-        android:background="@color/yellow"
-        android:hint="-"
-        android:textAlignment="center"
-        android:textSize="20sp" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etNombreCompleto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:enabled="true"
+                android:inputType="text"
+                android:maxLength="4000"/>
+        </com.google.android.material.textfield.TextInputLayout>
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Numero Ceular"
-        android:textSize="20dp"
-        android:textColor="@color/white"
-        android:hint="-"/>
 
-    <EditText
-        android:id="@+id/etNumeroCeluar"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:layout_marginLeft="12dp"
-        android:layout_marginRight="12dp"
-        android:background="@color/yellow"
-        android:hint="-"
-        android:minHeight="48dp"
-        android:textAlignment="center" />
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre Empresa"
+            android:layout_marginTop="24dp"
+            app:hintTextColor="@color/yellow"
+            android:background="@color/background"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            app:helperTextEnabled="true"
+            android:layout_marginBottom="12dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="NIT"
-        android:textSize="20dp"
-        android:textColor="@color/white"/>
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etNombreEmpresa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:enabled="true"
+                android:inputType="text"
+                android:maxLength="4000"/>
+        </com.google.android.material.textfield.TextInputLayout>
 
-    <EditText
-        android:id="@+id/etNit"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:background="@color/yellow"
-        android:ems="7"
-        android:hint="-"
-        android:textAlignment="center" />
 
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Corre Electronico"
-        android:textSize="20dp"
-        android:textColor="@color/white"/>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Numero Celular"
+            android:layout_marginTop="24dp"
+            app:hintTextColor="@color/yellow"
+            android:background="@color/background"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            app:helperTextEnabled="true"
+            android:layout_marginBottom="12dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-    <EditText
-        android:id="@+id/edCorreo"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:background="@color/yellow"
-        android:ems="7"
-        android:hint="-"
-        android:textAlignment="center"
-        android:layout_marginBottom="50dp"/>
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etNumeroCeluar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:enabled="true"
+                android:inputType="number"
+                android:maxLength="4000"/>
+        </com.google.android.material.textfield.TextInputLayout>
 
-    <Button
-        android:id="@+id/btnSiguienteRegis"
-        android:layout_width="280dp"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="70dp"
-        android:layout_marginBottom="5dp"
-        android:text="Siguiente"
-        android:textSize="20dp"/>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="NIT"
+            android:layout_marginTop="24dp"
+            app:hintTextColor="@color/yellow"
+            android:background="@color/background"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            app:helperTextEnabled="true"
+            android:layout_marginBottom="12dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etNit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:enabled="true"
+                android:inputType="number"
+                android:maxLength="4000"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Correo Electronico"
+            android:layout_marginTop="24dp"
+            app:hintTextColor="@color/yellow"
+            android:background="@color/background"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            app:helperTextEnabled="true"
+            android:layout_marginBottom="12dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etCorreo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:enabled="true"
+                android:inputType="textEmailAddress"
+                android:maxLength="4000"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnSiguienteRegis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="@string/btnSiguienteRegis"
+            android:textSize="18sp" />
+        <Button
+            android:id="@+id/btnDevolverce"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="@string/btnDevolverce"
+            android:textSize="18sp" />
+
+
 
 </LinearLayout>
+</ScrollView>
