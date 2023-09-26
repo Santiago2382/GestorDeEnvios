@@ -72,18 +72,24 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
+        android:id="@+id/btnIngresarApp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="@string/btnIniciar"
+        android:textSize="18sp" />
+
+    <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/btnLoginOlvidoPass"
         android:text="@string/olvidoPass"
         android:textColor="@color/white"
         android:autoSizeMinTextSize="48dp"
-        android:layout_marginBottom="70dp"
         android:background="@android:color/transparent"
         android:focusable="true"
         android:clickable="true"
         />
-
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -94,16 +100,19 @@
         android:background="@android:color/transparent"
         android:focusable="true"
         android:clickable="true"
-    />
+        />
 
-    <Button
-        android:id="@+id/btnIngresarApp"
+    <ImageButton
+        android:id="@+id/btnHuella"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:text="@string/btnIniciar"
-        android:textSize="18sp"
-        />
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="30dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:src="@drawable/huella" />
+
+
+
 
 
 </LinearLayout>

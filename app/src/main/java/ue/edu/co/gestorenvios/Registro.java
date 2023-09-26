@@ -7,11 +7,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 import com.android.volley.Request;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.google.android.material.textfield.TextInputEditText;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -32,7 +29,7 @@ public class Registro extends AppCompatActivity {
         setContentView(R.layout.activity_registro);
 
         // Asociación de campos de entrada
-        etUsuario = findViewById(R.id.etUsuarioRegistro);
+        etUsuario = findViewById(R.id.etNombreRegistro);
         etPassword = findViewById(R.id.etPassResgistro);
         etNumeroCelular = findViewById(R.id.etNumeroCelular);
         etNit = findViewById(R.id.etNit);
@@ -58,7 +55,7 @@ public class Registro extends AppCompatActivity {
 
     public void registerUser() {
 
-        String url = "http://192.168.1.10/api_gestor/register.php";
+        String url = "http://192.168.1.8/api_gestor/register.php";
 
         StringRequest postRequest = new StringRequest(Request.Method.POST, url, response -> {
 

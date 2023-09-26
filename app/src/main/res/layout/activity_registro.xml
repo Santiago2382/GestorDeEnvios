@@ -22,7 +22,7 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Usuario"
+            android:hint="@string/etNombreRegistro"
             android:layout_marginTop="24dp"
             app:hintTextColor="@color/yellow"
             android:background="@color/background"
@@ -33,7 +33,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/etUsuarioRegistro"
+                android:id="@+id/etNombreRegistro"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:enabled="true"

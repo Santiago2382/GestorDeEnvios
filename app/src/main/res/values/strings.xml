@@ -37,6 +37,8 @@
     <string name="btnPregunta3">¿Cómo miro la información de mi pedido?</string>
     <string name="btnVolverPreguntas">Volver</string>
     <string name="btnPreguntasFrecuentes">Preguntas Frecuentes</string>
+    <string name="etNombreRegistro">Nombre</string>
+
 
     <!--Santiago -->
     <string name="tvRecuperarPass">Recuperar contraseña</string>
