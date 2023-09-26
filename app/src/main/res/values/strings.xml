@@ -2,9 +2,9 @@
     <string name="app_name">SSH</string>
     <!--  Sofia   -->
     <string name="btnIniciar">Iniciar Sesion</string>
-    <string name="btnRegis">Registarse</string>
-    <string name="etNombreEmpresa">Nombre Empresa</string>
-    <string name="etNumeroCelualr">Número Celular</string>
+    <string name="btnRegis">Registrarse</string>
+    <string name="etPassRegistro">Contraseña</string>
+    <string name="etNumeroCelular">Número Celular</string>
     <string name="etNit">NIT</string>
     <string name="etCorreo">Correo Electrónico</string>
     <string name="btnSiguienteRegis">Siguiente</string>
@@ -12,7 +12,7 @@
     <string name="etCorreoElectronico">Escriba su correo electrónico</string>
     <string name="etNombreCompleto">Escriba su nombre completo</string>
     <string name="btnEnviar">Enviar</string>
-    <string name="btnDevolverce">Volver</string>
+    <string name="btnVolverRegistro">Volver</string>
     <!--Harold -->
 
     <string name="loginDescription">¡Bienvenido!</string>
