@@ -136,7 +136,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
-            android:text="@string/btnSiguienteRegis"
+            android:text="@string/btnRegis"
             android:textSize="18sp" />
         <Button
             android:id="@+id/btnDevolverce"
