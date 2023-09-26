@@ -12,17 +12,17 @@
         android:orientation="vertical"
         android:background="@color/background">
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:src="@drawable/ssh"
-        android:layout_marginBottom="10dp"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/ssh"
+            android:layout_marginBottom="10dp"/>
 
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Nombre Completo"
+            android:hint="Usuario"
             android:layout_marginTop="24dp"
             app:hintTextColor="@color/yellow"
             android:background="@color/background"
@@ -33,7 +33,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/etNombreCompleto"
+                android:id="@+id/etUsuarioRegistro"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:enabled="true"
@@ -45,7 +45,7 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Nombre Empresa"
+            android:hint="Contraseña"
             android:layout_marginTop="24dp"
             app:hintTextColor="@color/yellow"
             android:background="@color/background"
@@ -56,11 +56,11 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/etNombreEmpresa"
+                android:id="@+id/etPassResgistro"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:enabled="true"
-                android:inputType="text"
+                android:inputType="textPassword"
                 android:maxLength="4000"/>
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -79,7 +79,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/etNumeroCeluar"
+                android:id="@+id/etNumeroCelular"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:enabled="true"
@@ -90,7 +90,7 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="NIT"
+            android:hint="NIT o CC"
             android:layout_marginTop="24dp"
             app:hintTextColor="@color/yellow"
             android:background="@color/background"
@@ -146,7 +146,5 @@
             android:text="@string/btnDevolverce"
             android:textSize="18sp" />
 
-
-
-</LinearLayout>
+    </LinearLayout>
 </ScrollView>

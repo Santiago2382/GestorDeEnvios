@@ -34,10 +34,9 @@
 
         <ImageButton
             android:id="@+id/btnHistorialEnvios"
-            android:layout_width="142dp"
-            android:layout_height="144dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:layout_marginHorizontal="145dp"
             android:background="?android:attr/selectableItemBackground"
             android:src="@drawable/historial" />
 
@@ -54,10 +53,9 @@
 
         <ImageButton
             android:id="@+id/btnSolicitarMercancia"
-            android:layout_width="142dp"
-            android:layout_height="144dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:layout_marginHorizontal="145dp"
             android:background="?android:attr/selectableItemBackground"
             android:src="@drawable/solicitar" />
 
@@ -67,17 +65,16 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="30dp"
-            android:text="@string/tvSolicitarMercancia"
             android:textAlignment="center"
+            android:text="@string/tvSolicitarMercancia"
             android:textColor="@color/white"
             android:textSize="20dp" />
 
         <ImageButton
             android:id="@+id/btnBuzonSugerencias"
-            android:layout_width="142dp"
-            android:layout_height="144dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:layout_marginHorizontal="145dp"
             android:background="?android:attr/selectableItemBackground"
             android:src="@drawable/buzon" />
 
@@ -94,9 +91,8 @@
 
         <Button
             android:id="@+id/btnSalir"
-            android:layout_width="89dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="170dp"
             android:text="@string/btnSalir" />
 
     </LinearLayout>
