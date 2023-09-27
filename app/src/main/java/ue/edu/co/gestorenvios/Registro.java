@@ -50,7 +50,7 @@ public class Registro extends AppCompatActivity {
             }
         });
 
-        Button buttonDevolverce = findViewById(R.id.btnDevolverce);
+        Button buttonDevolverce = findViewById(R.id.btnVolver);
         buttonDevolverce.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -65,7 +65,6 @@ public class Registro extends AppCompatActivity {
         String url = "http://192.168.1.8/api_gestor/register.php";
 
         StringRequest postRequest = new StringRequest(Request.Method.POST, url, response -> {
-
 
             // Respuesta del servidor
             try {
