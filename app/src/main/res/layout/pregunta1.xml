@@ -18,7 +18,7 @@
         android:textSize="30sp"
         android:layout_marginTop="50sp"
         android:textColor="@color/white"
-        android:text="Una vez se inicia sesión se despliega un menú y en el botón SOLICITAR MERCANCIA se incia el proceso de solicitirud"
+        android:text="Una vez se inicia sesión se despliega un menú y en el botón SOLICITAR MERCANCIA se incia el proceso de solicitud"
         android:layout_marginRight="3dp"
         android:layout_marginLeft="3dp"
         android:textAlignment="center"

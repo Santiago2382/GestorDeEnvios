@@ -42,7 +42,7 @@ public class Buzon extends AppCompatActivity {
     }
 
     private void enviarSugerencia() {
-        String url = "http://192.168.1.10/api_gestor/sugerencias.php";  // Reemplaza con tu URL de endpoint para las sugerencias
+        String url = "http://192.168.1.8/api_gestor/sugerencias.php";  // Reemplaza con tu URL de endpoint para las sugerencias
         if (!validateFields()) {
             Toast.makeText(Buzon.this, "Todos los campos deben estar completos", Toast.LENGTH_SHORT).show();
             return;

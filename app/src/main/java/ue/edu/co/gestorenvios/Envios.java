@@ -42,7 +42,7 @@ public class Envios extends AppCompatActivity {
 
         // Define solo la URL base aquí
         retrofit = new Retrofit.Builder()
-                .baseUrl("http://192.168.1.10/api_gestor/")
+                .baseUrl("http://192.168.1.8/api_gestor/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(httpClient.build())  // Agregar el cliente con logging
                 .build();

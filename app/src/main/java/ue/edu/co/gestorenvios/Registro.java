@@ -63,7 +63,7 @@ public class Registro extends AppCompatActivity {
 
     public void registerUser() {
         if (validateFields()) {
-            String url = "http://192.168.1.10/api_gestor/register.php";
+            String url = "http://192.168.1.8/api_gestor/register.php";
 
             StringRequest postRequest = new StringRequest(Request.Method.POST, url, response -> {
 

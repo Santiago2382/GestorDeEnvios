@@ -49,7 +49,7 @@ public class SolicitarMercancia extends AppCompatActivity {
     }
 
     private void solicitarMercancia() {
-        String url = "http://192.168.1.10/api_gestor/order.php";
+        String url = "http://192.168.1.8/api_gestor/order.php";
 
         JSONObject jsonBody = new JSONObject();
         try {
