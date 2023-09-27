@@ -46,14 +46,16 @@ public class OlvidoPass extends AppCompatActivity {
     }
 
     private void cambiarContrasena(String correo, String nuevaPass, String confirmarPass) {
-        String URL = "http://192.168.1.8/api_gestor/nueva_contrasena.php";
+        String URL = "http://192.168.1.10/api_gestor/nueva_contrasena.php";
         StringRequest stringRequest = new StringRequest(Request.Method.POST, URL,
                 response -> {
                     try {
                         JSONObject jsonObject = new JSONObject(response);
                         int success = jsonObject.getInt("success");
                         String message = jsonObject.getString("message");
-
+                        Intent intent = new Intent(OlvidoPass.this, Login.class);
+                        startActivity(intent);
+                        finish();
                         if(success == 1) {
                             Toast.makeText(OlvidoPass.this, message, Toast.LENGTH_SHORT).show();
                         } else {

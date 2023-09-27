@@ -2,6 +2,7 @@ package ue.edu.co.gestorenvios;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -50,7 +51,7 @@ public class Registro extends AppCompatActivity {
             }
         });
 
-        Button buttonDevolverce = findViewById(R.id.btnVolver);
+        Button buttonDevolverce = findViewById(R.id.btnDevolverce);
         buttonDevolverce.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -61,40 +62,64 @@ public class Registro extends AppCompatActivity {
     }
 
     public void registerUser() {
+        if (validateFields()) {
+            String url = "http://192.168.1.10/api_gestor/register.php";
 
-        String url = "http://192.168.1.8/api_gestor/register.php";
+            StringRequest postRequest = new StringRequest(Request.Method.POST, url, response -> {
 
-        StringRequest postRequest = new StringRequest(Request.Method.POST, url, response -> {
+                // Respuesta del servidor
+                try {
+                    JSONObject jsonResponse = new JSONObject(response);
+                    String message = jsonResponse.getString("message");
+                    Toast.makeText(Registro.this, message, Toast.LENGTH_SHORT).show();
 
-            // Respuesta del servidor
-            try {
-                JSONObject jsonResponse = new JSONObject(response);
-                String message = jsonResponse.getString("message");
-                Toast.makeText(Registro.this, message, Toast.LENGTH_SHORT).show();
-            } catch (JSONException e) {
-                e.printStackTrace();
-                Toast.makeText(Registro.this, "JSONException: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                    // Agregar log para el mensaje
+                    Log.d("RegistroActivity", "Mensaje del servidor: " + message);
+
+                    // Si el registro es exitoso, redirige al Login
+                    Intent intent = new Intent(Registro.this, Login.class);
+                    startActivity(intent);
+                    finish();
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                    Toast.makeText(Registro.this, "JSONException: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                }
+
+            }, error -> {
+                // Error en la solicitud
+                String errorMessage = error != null ? error.toString() : "Unknown error";
+                Toast.makeText(Registro.this, "Error al conectar: " + errorMessage, Toast.LENGTH_SHORT).show();
             }
+            ) {
+                @Override
+                protected Map<String, String> getParams() {
+                    Map<String, String> params = new HashMap<>();
+                    params.put("usuario", etUsuario.getText().toString());
+                    params.put("password", etPassword.getText().toString());
+                    params.put("numero_celular", etNumeroCelular.getText().toString());
+                    params.put("nit_o_cc", etNit.getText().toString());
+                    params.put("correo", etCorreo.getText().toString());
+                    return params;
+                }
+            };
 
-        }, error -> {
-            // Error en la solicitud
-            String errorMessage = error != null ? error.toString() : "Unknown error";
-            Toast.makeText(Registro.this, "Error al conectar: " + errorMessage, Toast.LENGTH_SHORT).show();
+            Volley.newRequestQueue(this).add(postRequest);
         }
-        ) {
-            @Override
-            protected Map<String, String> getParams() {
-                Map<String, String> params = new HashMap<>();
-                params.put("usuario", etUsuario.getText().toString());
-                params.put("password", etPassword.getText().toString());
-                params.put("numero_celular", etNumeroCelular.getText().toString());
-                params.put("nit_o_cc", etNit.getText().toString());
-                params.put("correo", etCorreo.getText().toString());
-                return params;
-            }
-        };
+    }
 
-        Volley.newRequestQueue(this).add(postRequest);
+
+    private boolean validateFields() {
+        if (etUsuario.getText().toString().trim().isEmpty() ||
+                etPassword.getText().toString().trim().isEmpty() ||
+                etNumeroCelular.getText().toString().trim().isEmpty() ||
+                etNit.getText().toString().trim().isEmpty() ||
+                etCorreo.getText().toString().trim().isEmpty()) {
+
+            Toast.makeText(Registro.this, "Todos los campos deben estar completos", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        return true;
     }
 }
 

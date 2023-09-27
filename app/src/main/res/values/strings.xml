@@ -14,7 +14,7 @@
     <string name="btnEnviar">Enviar</string>
     <string name="btnVolverRegistro">Volver</string>
     <!--Harold -->
-    <string name="tvTituloPedidos">Historial Pedidos</string>
+
     <string name="loginDescription">¡Bienvenido!</string>
     <string name="loginCorreo">Correo Electrónico</string>
     <string name="loginPass">Contraseña</string>
@@ -22,7 +22,7 @@
     <string name="btnRegistrarse">Registrarse aquí</string>
     <string name="btnLogin">Iniciar Sesión</string>
     <string name="tvCantidadPaquetes">Cantidad de paquetes</string>
-    <string name="tvDimension">Dimensiones del pedido (metros)</string>
+    <string name="tvDimension">Dimensiones del pedido (en total)</string>
     <string name="EtDimensionAncho">Ancho</string>
     <string name="EtDimensionAlto">Alto</string>
     <string name="tvDireccionPaquete">Dirección</string>

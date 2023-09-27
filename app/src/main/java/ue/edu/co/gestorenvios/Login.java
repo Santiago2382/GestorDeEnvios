@@ -10,6 +10,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
+import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import org.json.JSONException;
@@ -58,16 +59,24 @@ public class Login extends AppCompatActivity {
 
     private void loginUser(String correo, String contrasena) {
         String url = "http://192.168.1.10/api_gestor/login.php";
-        RequestQueue queue = Volley.newRequestQueue(this);
 
-        StringRequest postRequest = new StringRequest(Request.Method.POST, url,
+        // Crear objeto JSON con los datos a enviar
+        JSONObject params = new JSONObject();
+        try {
+            params.put("correo", correo);
+            params.put("contrasena", contrasena);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        JsonObjectRequest jsonRequest = new JsonObjectRequest(
+                Request.Method.POST, url, params,
                 response -> {
                     try {
-                        JSONObject jsonResponse = new JSONObject(response);
-                        String message = jsonResponse.getString("message");
+                        String message = response.getString("message");
                         Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
 
-                        if (jsonResponse.has("user")) {
+                        if (response.has("user")) {
                             Intent intent = new Intent(Login.this, Menu.class);
                             startActivity(intent);
                         }
@@ -76,20 +85,18 @@ public class Login extends AppCompatActivity {
                         Toast.makeText(getApplicationContext(), "Error al procesar la respuesta", Toast.LENGTH_SHORT).show();
                     }
                 },
-                error -> Toast.makeText(getApplicationContext(), "Error: " + error.toString(), Toast.LENGTH_LONG).show()) {
+                error -> Toast.makeText(getApplicationContext(), "Error al conectar", Toast.LENGTH_SHORT).show()
+        ) {
             @Override
-            protected Map<String, String> getParams() {
-                Map<String, String> params = new HashMap<>();
-                params.put("correo", correo);
-                params.put("contrasena", contrasena);
-                return params;
+            public Map<String, String> getHeaders() {
+                Map<String, String> headers = new HashMap<>();
+                headers.put("Content-Type", "application/json; charset=utf-8");
+                return headers;
             }
         };
-        queue.add(postRequest);
+
+        RequestQueue queue = Volley.newRequestQueue(this);
+        queue.add(jsonRequest);
     }
 
-    @Override
-    public void onBackPressed() {
-        finishAffinity();  // Cierra todas las actividades y sale de la app
-    }
 }
