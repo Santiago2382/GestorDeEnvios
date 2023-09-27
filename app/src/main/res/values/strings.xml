@@ -48,7 +48,7 @@
     <string name="tvSolicitarMercancia">Solicitar mercancía</string>
     <string name="etNuevaPass">Nueva contraseña</string>
     <string name="etConfirmarNuevaPass">Confirmar contraseña</string>
-    <string name="etUsuarioPass">Usuario</string>
+    <string name="etUsuarioPass">Correo</string>
     <string name="btnConfirmarPass">Confirmar</string>
     <string name="btnHistorialEnvios">Historial de envíos</string>
     <string name="btnSolicitarMercancia">Solicitar Mercancía</string>

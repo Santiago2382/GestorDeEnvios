@@ -59,11 +59,11 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etUsuario"
+            android:id="@+id/etCorreo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:enabled="true"
-            android:inputType="text"
+            android:inputType="textEmailAddress"
             android:maxLength="4000"/>
     </com.google.android.material.textfield.TextInputLayout>
 

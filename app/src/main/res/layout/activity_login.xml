@@ -71,17 +71,18 @@
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Contraseña"
+        android:hint="@string/loginPass"
         android:layout_marginTop="24dp"
         app:hintTextColor="@color/yellow"
         android:background="@color/background"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         app:helperTextEnabled="true"
-        android:layout_marginBottom="12dp"
+        android:layout_marginBottom="50dp"
+        app:endIconMode="password_toggle"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-        <com.google.android.material.textfield.TextInputEditText
+    <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etLoginPass"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
