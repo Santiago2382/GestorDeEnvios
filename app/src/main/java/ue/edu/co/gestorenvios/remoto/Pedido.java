@@ -1,7 +1,5 @@
 package ue.edu.co.gestorenvios.remoto;
 
-import java.util.List;
-
 public class Pedido {
     private int usuario_id;
     private int cantidad_paquetes;
@@ -13,12 +11,13 @@ public class Pedido {
     private String nombre_receptor;
     private String celular_receptor;
 
-    // Aquí añadimos el nuevo método
+    // Método personalizado para obtener las dimensiones del pedido
     public String getDimensiones() {
         return getAncho() + "x" + getAlto();
     }
 
-    // getter and setter
+    // Getters y setters para las propiedades del pedido
+
     public int getUsuario_id() {
         return usuario_id;
     }
@@ -91,4 +90,3 @@ public class Pedido {
         this.celular_receptor = celular_receptor;
     }
 }
-

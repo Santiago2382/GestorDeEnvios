@@ -1,5 +1,6 @@
 package ue.edu.co.gestorenvios;
 
+// Importaciones de clases y paquetes necesarios
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -26,7 +27,7 @@ public class SolicitarMercancia extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_solicitar_mercancia);
 
-        // Asociación de campos de entrada
+        // Asociación de campos de entrada con los elementos de la interfaz de usuario
         etCantidadPaquetes = findViewById(R.id.etCantidadPaquetes);
         etDimensionAlto = findViewById(R.id.etDimensionAlto);
         etDimensionAncho = findViewById(R.id.etDimensionAncho);
@@ -37,6 +38,7 @@ public class SolicitarMercancia extends AppCompatActivity {
         etCelularRecibe = findViewById(R.id.etCelularRecibe);
         etIdUsuario = findViewById(R.id.etIdUsuario);
 
+        // Configuración del botón para devolverse a la actividad de menú
         ImageButton buttonDevolverse = findViewById(R.id.btnMercanciaDevolverse);
         buttonDevolverse.setOnClickListener(view -> {
             Intent intent = new Intent(SolicitarMercancia.this, Menu.class);
@@ -44,13 +46,17 @@ public class SolicitarMercancia extends AppCompatActivity {
             finish(); // Cerrar la actividad actual
         });
 
+        // Configuración del botón para solicitar mercancía
         Button btnSolicitarMercancia = findViewById(R.id.btnSolicitarMercancia);
         btnSolicitarMercancia.setOnClickListener(view -> solicitarMercancia());
     }
 
+    // Método para enviar una solicitud de mercancía al servidor
     private void solicitarMercancia() {
-        String url = "http://192.168.1.8/api_gestor/order.php";
+        // URL del servidor al que se enviará la solicitud
+        String url = "http://192.168.1.10/api_gestor/order.php";
 
+        // Creación de un objeto JSON que contiene los datos de la solicitud
         JSONObject jsonBody = new JSONObject();
         try {
             jsonBody.put("usuario_id", etIdUsuario.getText().toString());
@@ -66,8 +72,10 @@ public class SolicitarMercancia extends AppCompatActivity {
             e.printStackTrace();
         }
 
+        // Creación de una solicitud JSON POST utilizando Volley
         JsonObjectRequest postRequest = new JsonObjectRequest(Request.Method.POST, url, jsonBody, response -> {
             try {
+                // Manejo de la respuesta del servidor
                 String message = response.getString("message");
                 Toast.makeText(SolicitarMercancia.this, message, Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(SolicitarMercancia.this, Menu.class);
@@ -78,10 +86,12 @@ public class SolicitarMercancia extends AppCompatActivity {
                 Toast.makeText(SolicitarMercancia.this, "JSONException: " + e.getMessage(), Toast.LENGTH_SHORT).show();
             }
         }, error -> {
+            // Manejo de errores de la solicitud
             String errorMessage = error != null ? error.toString() : "Unknown error";
             Toast.makeText(SolicitarMercancia.this, "Error al conectar: " + errorMessage, Toast.LENGTH_SHORT).show();
         });
 
+        // Agregar la solicitud a la cola de solicitudes de Volley
         Volley.newRequestQueue(this).add(postRequest);
     }
 }

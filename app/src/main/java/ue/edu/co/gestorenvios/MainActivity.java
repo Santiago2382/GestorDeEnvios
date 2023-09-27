@@ -1,7 +1,6 @@
 package ue.edu.co.gestorenvios;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -14,26 +13,26 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // Configurar el botón para iniciar la actividad de inicio de sesión (Login)
         Button buttonLogin = findViewById(R.id.btnIniciar);
         buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Iniciar la segunda actividad aquí
+                // Iniciar la actividad de inicio de sesión (Login.class)
                 Intent intent = new Intent(MainActivity.this, Login.class);
                 startActivity(intent);
             }
         });
 
+        // Configurar el botón para iniciar la actividad de registro (Registro)
         Button buttonRegistro = findViewById(R.id.btnRegis);
         buttonRegistro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Iniciar la segunda actividad aquí
+                // Iniciar la actividad de registro (Registro.class)
                 Intent intent = new Intent(MainActivity.this, Registro.class);
                 startActivity(intent);
             }
         });
-
-
     }
 }

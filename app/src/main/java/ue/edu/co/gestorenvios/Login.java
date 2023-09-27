@@ -77,7 +77,7 @@ public class Login extends AppCompatActivity {
     }
 
     private void loginUser(String correo, String contrasena) {
-        String url = "http://192.168.1.8/api_gestor/login.php";
+        String url = "http://192.168.1.10/api_gestor/login.php";
         RequestQueue queue = Volley.newRequestQueue(this);
 
         StringRequest postRequest = new StringRequest(Request.Method.POST, url,

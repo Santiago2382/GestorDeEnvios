@@ -3,10 +3,10 @@ package ue.edu.co.gestorenvios.remoto;
 import java.util.List;
 
 public class PedidosResponse {
-    private boolean success;
-    private List<Pedido> pedidos;
+    private boolean success; // Indica si la solicitud fue exitosa o no
+    private List<Pedido> pedidos; // Lista de objetos de tipo Pedido
 
-    // Getters y setters
+    // Getters y setters para success y pedidos
 
     public boolean isSuccess() {
         return success;

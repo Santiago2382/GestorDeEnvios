@@ -1,5 +1,6 @@
 package ue.edu.co.gestorenvios;
 
+// Importaciones de clases y paquetes necesarios
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -30,19 +31,21 @@ public class Registro extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registro);
 
+        // Configuración del botón para volver a la actividad de inicio de sesión (Login)
         ImageButton buttonDevolverse = findViewById(R.id.btnRegistroDevolverse);
         buttonDevolverse.setOnClickListener(view -> {
             Intent intent = new Intent(Registro.this, Login.class);
             startActivity(intent);
         });
 
-        // Asociación de campos de entrada
+        // Asociación de campos de entrada con los elementos de la interfaz de usuario
         etUsuario = findViewById(R.id.etNombreRegistro);
         etPassword = findViewById(R.id.etPassResgistro);
         etNumeroCelular = findViewById(R.id.etNumeroCelular);
         etNit = findViewById(R.id.etNit);
         etCorreo = findViewById(R.id.etCorreo);
 
+        // Configuración del botón para realizar el registro del usuario
         Button buttonRegistro = findViewById(R.id.btnSiguienteRegis);
         buttonRegistro.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,6 +54,7 @@ public class Registro extends AppCompatActivity {
             }
         });
 
+        // Configuración del botón para volver a la actividad de inicio de sesión (Login)
         Button buttonDevolverce = findViewById(R.id.btnDevolverce);
         buttonDevolverce.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,22 +65,25 @@ public class Registro extends AppCompatActivity {
         });
     }
 
+    // Método para registrar al usuario en el servidor
     public void registerUser() {
+        // Validación de los campos de entrada
         if (validateFields()) {
-            String url = "http://192.168.1.8/api_gestor/register.php";
+            // URL del servidor al que se enviará la solicitud de registro
+            String url = "http://192.168.1.10/api_gestor/register.php";
 
+            // Creación de una solicitud POST de tipo String utilizando Volley
             StringRequest postRequest = new StringRequest(Request.Method.POST, url, response -> {
-
                 // Respuesta del servidor
                 try {
                     JSONObject jsonResponse = new JSONObject(response);
                     String message = jsonResponse.getString("message");
                     Toast.makeText(Registro.this, message, Toast.LENGTH_SHORT).show();
 
-                    // Agregar log para el mensaje
+                    // Agregar un registro de log para el mensaje del servidor
                     Log.d("RegistroActivity", "Mensaje del servidor: " + message);
 
-                    // Si el registro es exitoso, redirige al Login
+                    // Si el registro es exitoso, redirige a la actividad de inicio de sesión (Login)
                     Intent intent = new Intent(Registro.this, Login.class);
                     startActivity(intent);
                     finish();
@@ -94,6 +101,7 @@ public class Registro extends AppCompatActivity {
             ) {
                 @Override
                 protected Map<String, String> getParams() {
+                    // Parámetros que se enviarán en la solicitud POST
                     Map<String, String> params = new HashMap<>();
                     params.put("usuario", etUsuario.getText().toString());
                     params.put("password", etPassword.getText().toString());
@@ -104,11 +112,12 @@ public class Registro extends AppCompatActivity {
                 }
             };
 
+            // Agregar la solicitud a la cola de solicitudes de Volley
             Volley.newRequestQueue(this).add(postRequest);
         }
     }
 
-
+    // Método para validar que todos los campos estén completos
     private boolean validateFields() {
         if (etUsuario.getText().toString().trim().isEmpty() ||
                 etPassword.getText().toString().trim().isEmpty() ||
@@ -122,4 +131,3 @@ public class Registro extends AppCompatActivity {
         return true;
     }
 }
-

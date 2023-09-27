@@ -24,12 +24,14 @@ public class PedidosAdapter extends RecyclerView.Adapter<PedidosAdapter.PedidoVi
     @NonNull
     @Override
     public PedidoViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        // Inflar el diseño del elemento de pedido
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_pedido, parent, false);
         return new PedidoViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull PedidoViewHolder holder, int position) {
+        // Vincular datos del pedido a los elementos de la vista
         Pedido pedidoActual = listaPedidos.get(position);
         holder.tvUsuarioId.setText("Usuario ID: " + String.valueOf(pedidoActual.getUsuario_id()));
         holder.tvCantidadPaquetes.setText("Cantidad de Paquetes: " + String.valueOf(pedidoActual.getCantidad_paquetes()));
@@ -38,15 +40,16 @@ public class PedidosAdapter extends RecyclerView.Adapter<PedidosAdapter.PedidoVi
         holder.tvCiudadBarrio.setText("Ciudad/Barrio: " + pedidoActual.getCiudad() + "/" + pedidoActual.getBarrio());
         holder.tvNombreReceptor.setText("Nombre del Receptor: " + pedidoActual.getNombre_receptor());
         holder.tvCelularReceptor.setText("Celular del Receptor: " + pedidoActual.getCelular_receptor());
-
     }
 
     @Override
     public int getItemCount() {
+        // Devuelve la cantidad de elementos en la lista de pedidos
         return listaPedidos.size();
     }
 
     public static class PedidoViewHolder extends RecyclerView.ViewHolder {
+        // Definir elementos de la vista para mostrar los datos del pedido
         TextView tvUsuarioId;
         TextView tvCantidadPaquetes;
         TextView tvDimensiones;
@@ -57,6 +60,7 @@ public class PedidosAdapter extends RecyclerView.Adapter<PedidosAdapter.PedidoVi
 
         public PedidoViewHolder(@NonNull View itemView) {
             super(itemView);
+            // Inicializar los elementos de la vista
             tvUsuarioId = itemView.findViewById(R.id.tvUsuarioId);
             tvCantidadPaquetes = itemView.findViewById(R.id.tvCantidadPaquetes);
             tvDimensiones = itemView.findViewById(R.id.tvDimensiones);
@@ -66,6 +70,4 @@ public class PedidosAdapter extends RecyclerView.Adapter<PedidosAdapter.PedidoVi
             tvCelularReceptor = itemView.findViewById(R.id.tvCelularReceptor);
         }
     }
-
-
 }
