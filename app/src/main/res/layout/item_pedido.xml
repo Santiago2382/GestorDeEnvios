@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- ID del usuario -->
+    <TextView
+        android:id="@+id/tvUsuarioId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Usuario ID: "/>
+
+    <!-- Cantidad de paquetes -->
+    <TextView
+        android:id="@+id/tvCantidadPaquetes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cantidad de paquetes: "/>
+
+    <!-- Dimensiones del paquete -->
+    <TextView
+        android:id="@+id/tvDimensiones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dimensiones: "/>
+
+    <!-- Dirección -->
+    <TextView
+        android:id="@+id/tvDireccion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dirección: "/>
+
+    <!-- Ciudad y barrio -->
+    <TextView
+        android:id="@+id/tvCiudadBarrio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ciudad/Barrio: "/>
+
+    <!-- Nombre del receptor -->
+    <TextView
+        android:id="@+id/tvNombreReceptor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Receptor: "/>
+
+    <!-- Celular del receptor -->
+    <TextView
+        android:id="@+id/tvCelularReceptor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Celular del receptor: "/>
+
+</LinearLayout>
