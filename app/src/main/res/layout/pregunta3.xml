@@ -6,15 +6,17 @@
     android:background="@color/background">
 
     <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:id="@+id/ivImagen"
+        android:layout_width="223dp"
+        android:layout_height="200dp"
+        android:layout_marginLeft="95dp"
         android:src="@drawable/ssh" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="30sp"
-        android:layout_marginTop="200sp"
+        android:layout_marginTop="50sp"
         android:textColor="@color/white"
         android:text="Una vez se hace la solicitud del pedido, aparecerá en el apartado de HISTORIAL DE PEDIDOS, seleccionas el pedido que quieres ver y ahí te va aparecer toda la información"
         android:layout_marginRight="3dp"

@@ -6,27 +6,37 @@
     android:layout_height="match_parent"
     android:fillViewport="true">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/background"
-        android:orientation="vertical"
         tools:context=".Menu">
 
         <ImageButton
             android:id="@+id/btnPreguntasFrecuentes"
             android:layout_width="75dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:layout_marginTop="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="16dp"
             android:background="?android:attr/selectableItemBackground"
             android:src="@drawable/pregunta" />
+
+        <ImageButton
+            android:id="@+id/btnMenuDevolverse"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="16dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:src="@drawable/devolverse" />
 
         <TextView
             android:id="@+id/tvMenu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="70dp"
+            android:layout_below="@+id/btnPreguntasFrecuentes"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="1dp"
             android:text="@string/tvMenu"
             android:textAlignment="center"
             android:textColor="@color/white"
@@ -36,7 +46,8 @@
             android:id="@+id/btnHistorialEnvios"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_below="@+id/tvMenu"
+            android:layout_marginTop="16dp"
             android:background="?android:attr/selectableItemBackground"
             android:src="@drawable/historial" />
 
@@ -44,18 +55,20 @@
             android:id="@+id/tvHistorialEnvios"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="30dp"
+            android:layout_below="@+id/btnHistorialEnvios"
+            android:layout_marginTop="16dp"
+            android:layout_centerHorizontal="true"
             android:text="@string/tvHistorialEnvios"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="20dp" />
+            android:textSize="20sp" />
 
         <ImageButton
             android:id="@+id/btnSolicitarMercancia"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_below="@+id/tvHistorialEnvios"
+            android:layout_marginTop="16dp"
             android:background="?android:attr/selectableItemBackground"
             android:src="@drawable/solicitar" />
 
@@ -63,18 +76,20 @@
             android:id="@+id/tvSolicitarMercancia"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="30dp"
-            android:textAlignment="center"
+            android:layout_below="@+id/btnSolicitarMercancia"
+            android:layout_marginTop="16dp"
+            android:layout_centerHorizontal="true"
             android:text="@string/tvSolicitarMercancia"
+            android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="20dp" />
+            android:textSize="20sp" />
 
         <ImageButton
             android:id="@+id/btnBuzonSugerencias"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_below="@+id/tvSolicitarMercancia"
+            android:layout_marginTop="16dp"
             android:background="?android:attr/selectableItemBackground"
             android:src="@drawable/buzon" />
 
@@ -82,20 +97,16 @@
             android:id="@+id/tvBuzonSugerencias"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="30dp"
+            android:layout_below="@+id/btnBuzonSugerencias"
+            android:layout_marginTop="16dp"
+            android:layout_centerHorizontal="true"
             android:text="@string/tvBuzonSugerencias"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="20dp" />
+            android:textSize="20sp" />
 
-        <Button
-            android:id="@+id/btnSalir"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:text="@string/btnSalir" />
 
-    </LinearLayout>
+
+    </RelativeLayout>
 
 </ScrollView>

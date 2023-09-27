@@ -15,6 +15,12 @@ public class Menu extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
+        ImageButton buttonDevolverse = findViewById(R.id.btnMenuDevolverse);
+        buttonDevolverse.setOnClickListener(view -> {
+            Intent intent = new Intent(Menu.this, Login.class);
+            startActivity(intent);
+        });
+
         ImageButton buttonHistorialEnvios = findViewById(R.id.btnHistorialEnvios);
         buttonHistorialEnvios.setOnClickListener(new View.OnClickListener() {
             @Override

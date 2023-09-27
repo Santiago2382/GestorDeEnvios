@@ -1,25 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true">
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:background="@color/background">
 
-    <ImageView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:src="@drawable/ssh" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp">
+
+        <ImageButton
+            android:id="@+id/btnLoginDevolverse"
+            android:layout_width="39dp"
+            android:layout_height="39dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="18dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:src="@drawable/devolverse" />
+
+        <ImageView
+            android:id="@+id/ivImagen"
+            android:layout_width="223dp"
+            android:layout_height="200dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ssh" />
+
+    </RelativeLayout>
 
     <TextView
         android:id="@+id/tvLoginDescription"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="70dp"
+        android:layout_marginBottom="50dp"
         android:text="@string/loginDescription"
         android:textAlignment="center"
         android:textColor="@color/white"
@@ -96,6 +115,7 @@
         android:id="@+id/btnRegistrarse"
         android:text="@string/btnRegistrarse"
         android:textColor="@color/white"
+        android:layout_marginTop="20dp"
         android:autoSizeMinTextSize="48dp"
         android:background="@android:color/transparent"
         android:focusable="true"
@@ -110,9 +130,6 @@
         android:layout_marginBottom="30dp"
         android:background="?android:attr/selectableItemBackground"
         android:src="@drawable/huella" />
-
-
-
 
 
 </LinearLayout>
